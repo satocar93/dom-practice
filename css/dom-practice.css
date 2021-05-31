@@ -70,15 +70,17 @@ img {
     width: 100%; /* Como el position del elemento esta fixed, la anchura solo es la de su contenido, ponemos width en 100% para que ocupe el 100% de la pantalla */
     background-color: var(--second-modal-color);
     opacity: 0;
+    visibility: hidden;
     transition: transform .8s ease, opacity .8s ease;
     /* transformación para trasladar el panel desplegable hacia arriba mientras no lo necesitemos. */
-    transform: translate(-100%, 0); /* Recibe como parámetros valores coordenados de x y y */
+    /* transform: translate(-100%, 0); */
 
 }
 
 .panel.is-active { /* Estilos para panel cuando este activo */
-    transform: translate(0, 0);
+    /* transform: translate(0, 0); */
     opacity: 1;
+    visibility: visible;
 }
 
 .panel-btn {
