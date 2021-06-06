@@ -138,8 +138,6 @@ img {
     border-radius: 50%;background-color: var(--main-color);
 }
 
-/* ********** Scroll Top Button ********** */
-
 .scroll-top-btn {
     position: fixed;
     z-index: 999;
@@ -155,10 +153,15 @@ img {
     cursor: pointer;
     outline: 0;
     border: 0;
-};
-
+    transition: all 0.3s ease-out;
+}
 
 .scroll-top-btn:hover {
     background-color: var(--second-color);
     color: var(--main-color);
+}
+
+.hidden {
+    visibility: hidden;
+    opacity: 0;
 }
