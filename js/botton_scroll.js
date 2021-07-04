@@ -16,7 +16,7 @@ export default function scrollTopButton(btn) {
             $scrollBtn.classList.add("hidden")
         }
         // Por cualquiera de estas dos propiedades (una de window y otra de document) podemos detectar la distancia de la barra.
-        console.log(w.pageYOffset, d.documentElement.scrollTop);
+        // console.log(w.pageYOffset, d.documentElement.scrollTop);
     });
     // Designación del evento click
     d.addEventListener("click", e => {

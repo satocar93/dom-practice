@@ -5,9 +5,9 @@
     --main-font: sans-serif;
     --font-size: 16px;
     --main-color: #4ECDC4;
-    --second-color: #1A535C;
+    --second-color: #050E10;
     --main-modal-color: rgba(78, 205, 196, 0.85); /* Mismos colores pero con un poca opacidad. */
-    --second-modal-color: rgba(26, 83, 93, 0.85);
+    --second-modal-color: rgba(5, 14, 16, 0.85);
     --container-width: 1200px; /* Generar containers con una máxima anchura de crecimiento */
 }
 
@@ -135,8 +135,11 @@ img {
     margin: auto;
     width: 4rem;
     height: 4rem;
-    border-radius: 50%;background-color: var(--main-color);
+    border-radius: 50%;
+    background-color: var(--main-color);
 }
+
+/* **********Scroll Top Button********** */
 
 .scroll-top-btn {
     position: fixed;
@@ -164,4 +167,34 @@ img {
 .hidden {
     visibility: hidden;
     opacity: 0;
+}
+
+/* **********Dark Theme Button********** */
+
+.dark-theme-btn {
+    position: fixed;
+    z-index: 999;
+    bottom: 1vh;
+    left: 1vw;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    font-size: 2rem;
+    font-weight: bold;
+    background-color: var(--main-color);
+    color: var(--second-color);
+    cursor: pointer;
+    outline: 0;
+    border: 0;
+    transition: all 0.3s ease-out;
+}
+
+.dark-theme-btn:hover {
+    background-color: var(--second-color);
+    color: var(--main-color);
+}
+
+.dark-mode {
+    background-color: var(--second-color);
+    color: var(--main-color);
 }
