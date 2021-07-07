@@ -68,6 +68,7 @@ img {
     left: 0;
     right: 0;
     width: 100%; /* Como el position del elemento esta fixed, la anchura solo es la de su contenido, ponemos width en 100% para que ocupe el 100% de la pantalla */
+    overflow-y: auto;
     background-color: var(--second-modal-color);
     opacity: 0;
     visibility: hidden;
@@ -197,4 +198,23 @@ img {
 .dark-mode {
     background-color: var(--second-color);
     color: var(--main-color);
+}
+
+/* ********** Network Status ********** */
+
+.online,
+.offline {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    background-color: #99d98c;
+    color: #fff;
+}
+
+.offline {
+    background-color: #b71c1c;
 }

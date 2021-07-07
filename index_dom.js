@@ -8,6 +8,9 @@ import darkTheme from "./js/tema_oscuro.js";
 import responsiveMedia from "./js/objeto_responsive.js";
 import responsiveTester from "./js/prueba_responsive.js";
 import userDeviceInfo from "./js/deteccion_dispositivos.js";
+import networkStatus from "./js/deteccion_red.js";
+import webcam from "./js/deteccion_webcam.js";
+import getGeolocation from "./js/geolocalizacion.js";
 const d = document;
 // Asignación de eventos en el momento en que el documento carge (DOM ContentLoaded)
 d.addEventListener("DOMContentLoaded", e => {
@@ -30,6 +33,8 @@ d.addEventListener("DOMContentLoaded", e => {
         );
     responsiveTester("responsive-tester");
     userDeviceInfo("user-device");
+    webcam("webcam");
+    getGeolocation("geolocation");
 })
 
 // Desencadenamoslos eventos del teclado
@@ -40,3 +45,4 @@ d.addEventListener("keydown", e => {
 
 darkTheme(".dark-theme-btn", "dark-mode"); // Como a la clase dark-mode la vamos a activar/desactivar con un .add o .remove no necesitamos escribirla con el punto al llamar el parámetro.
 // Esta invocación fue sacada de la delegación principal de eventos, ya que internamente en la función darkTheme hay otra invocación del mismo evento DOM ContentLoad.
+networkStatus();
