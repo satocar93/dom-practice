@@ -218,3 +218,33 @@ img {
 .offline {
     background-color: #b71c1c;
 }
+
+/* ********** Search Filters ********** */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.card {
+    background-color: var(--second-color);
+    color: var(--main-color);
+    transition: all 0.3s ease-out;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card figcaption {
+    padding: 1rem;
+}
+
+/* Este estilo es para la clase filter. permite discriminar u ocultar los resultados que no coincidan con la busqueda. */
+.filter {
+    /* display: none; /* El problema de display:none es que este no es animable. usaremos un fade in y fade out con visibility: hidden */ 
+    visibility: hidden; /* El visibility: hidden no hace que las targetas desaparezcan de posición. */
+    opacity: 0;
+    /* Agregamos la propiedad order: 1; esto significa que todas las targetas que se oculten se van a recorrer al final */
+    order: 1;
+}

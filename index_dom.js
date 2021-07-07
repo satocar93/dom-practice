@@ -11,6 +11,7 @@ import userDeviceInfo from "./js/deteccion_dispositivos.js";
 import networkStatus from "./js/deteccion_red.js";
 import webcam from "./js/deteccion_webcam.js";
 import getGeolocation from "./js/geolocalizacion.js";
+import searchFilters from "./js/filtro_busquedas.js";
 const d = document;
 // Asignación de eventos en el momento en que el documento carge (DOM ContentLoaded)
 d.addEventListener("DOMContentLoaded", e => {
@@ -35,6 +36,7 @@ d.addEventListener("DOMContentLoaded", e => {
     userDeviceInfo("user-device");
     webcam("webcam");
     getGeolocation("geolocation");
+    searchFilters(".card-filter", ".card");
 })
 
 // Desencadenamoslos eventos del teclado
