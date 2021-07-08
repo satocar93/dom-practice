@@ -247,4 +247,5 @@ img {
     opacity: 0;
     /* Agregamos la propiedad order: 1; esto significa que todas las targetas que se oculten se van a recorrer al final */
     order: 1;
+    /* Con visibility y opacity los elementos no cambian de tamaño al disminuir los resultados de búsqueda. */
 }
